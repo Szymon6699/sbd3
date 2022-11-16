@@ -28,6 +28,11 @@ SELECT * FROM orders WHERE customer_id IN(SELECT id FROM customers WHERE id BETW
 SELECT * FROM customers JOIN orders ON customers.id=orders.customer_id;
 SELECT customer_name,COUNT(orders.id)  FROM customers INNER JOIN orders ON customers.id=orders.customer_id GROUP BY customer_id;
 
+SELECT * FROM orders ORDER BY id DESC limit 10;
+SELECT * FROM orders limit 10 OFFSET 10;
+
+SELECT * FROM orders JOIN orders_details  ON products.id=orders_details.product_id GROUP BY quantity
+
 
 
 
