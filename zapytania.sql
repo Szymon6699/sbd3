@@ -33,6 +33,8 @@ SELECT * FROM orders limit 10 OFFSET 10;
 
 SELECT * FROM orders JOIN orders_details  ON products.id=orders_details.product_id GROUP BY quantity
 
+SELECT country FROM customers HAVING COUNT(country)>5
+
 
 
 
